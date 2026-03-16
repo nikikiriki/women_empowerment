@@ -1,21 +1,153 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: women_empowerment
+    database: women-empowerment-490409
+    schema: source
+    tables:
+      - name: whr_2015
+        description: "Tabella World Happiness Report 2015"
+        columns:
+          - name: Country
+          - name: Region
+          - name: Happiness Rank
+          - name: Happiness Score
+          - name: Standard Error
+          - name: Economy _GDP per Capita_
+          - name: Family
+          - name: Health _Life Expectancy_
+          - name: Freedom
+          - name: Trust _Government Corruption_
+          - name: Generosity
+          - name: Dystopia Residual
+      - name: whr_2016
+        description: "Tabella World Happiness Report 2016"
+        columns:
+          - name: Country
+          - name: Region
+          - name: Happiness Rank
+          - name: Happiness Score
+          - name: Lower Confidence Interval
+          - name: Upper Confidence Interval
+          - name: Economy _GDP per Capita_
+          - name: Family
+          - name: Health _Life Expectancy_
+          - name: Freedom
+          - name: Trust _Government Corruption_
+          - name: Generosity
+          - name: Dystopia Residual
+      - name: whr_2017
+        description: "Tabella World Happiness Report 2017"
+        columns:
+          - name: Country
+          - name: Happiness_Rank
+          - name: Happiness_Score
+          - name: Whisker_high
+          - name: Whisker_low
+          - name: Economy__GDP_per_Capita_
+          - name: Family
+          - name: Health__Life_Expectancy_
+          - name: Freedom
+          - name: Generosity
+          - name: Trust__Government_Corruption_
+          - name: Dystopia_Residual
+      - name: whr_2019
+        description: "Tabella World Happiness Report 2019"
+        columns:
+          - name: Overall rank
+          - name: Country or region
+          - name: Score
+          - name: GDP per capita
+          - name: Social support
+          - name: Healthy life expectancy
+          - name: Freedom to make life choices
+          - name: Generosity
+          - name: Perceptions of corruption
+      - name: whr_2020
+        description: "Tabella World Happiness Report 2020"
+        columns:
+          - name: Country name
+          - name: Regional indicator
+          - name: Ladder score
+          - name: Standard error of ladder score
+          - name: upperwhisker
+          - name: lowerwhisker
+          - name: Logged GDP per capita
+          - name: Social support
+          - name: Healthy life expectancy
+          - name: Freedom to make life choices
+          - name: Generosity
+          - name: Perceptions of corruption
+          - name: Ladder score in Dystopia
+          - name: Dystopia + residual 
+      - name: whr_2021
+        description: "Tabella World Happiness Report 2021"
+        columns:
+          - name: Country name
+          - name: Regional indicator
+          - name: Ladder score
+          - name: Standard error of ladder score
+          - name: upperwhisker
+          - name: lowerwhisker
+          - name: Logged GDP per capita
+          - name: Social support
+          - name: Healthy life expectancy
+          - name: Freedom to make life choices
+          - name: Generosity
+          - name: Perceptions of corruption
+          - name: Ladder score in Dystopia
+          - name: Dystopia + residual
+      - name: whr_2022
+        description: "Tabella World Happiness Report 2022"
+        columns:
+          - name: RANK
+          - name: Country
+          - name: Happiness score
+          - name: Whisker-high
+          - name: Whisker-low
+          - name: Dystopia _1_83_ + residual
+          - name: Explained by:GDP per capita
+          - name: Explained by:Social support
+          - name: Explained by:Healthy life expectancy
+          - name: Explained by:Freedom to make life choices
+          - name: Explained by:Generosity
+          - name: Explained by:Perceptions of corruption
+      - name: women_empowerment_index
+        description: "Dati sull'empowerment femminile e parità di genere 2021-2022"
+        columns:
+          - name: Country
+          - name: Women's Empowerment Index _WEI_ - 2022
+          - name: Women's Empowerment Group - 2022
+          - name: Global Gender Parity Index _GGPI_ - 2022
+          - name: Gender Parity Group - 2022
+          - name: Human Development Group - 2021
+          - name: Sustainable Development Goal regions
+      - name: gii_years
+        description: "Indice di Disuguaglianza di Genere (serie storica)"
+        columns:
+          - name: countryIsoCode
+          - name: country
+          - name: indexCode
+          - name: index
+          - name: dimension
+          - name: indicatorCode
+          - name: indicator
+          - name: year
+          - name: actualValue
+          - name: value
+      - name: indicators_for_education
+        description: "Indicatori sull'istruzione per paese (2015-2022)"
+        columns:
+          - name: Country_Name
+          - name: Country_Code
+          - name: Series_Name
+          - name: Series_Code
+          - name: YR2015
+          - name: YR2016
+          - name: YR2017
+          - name: YR2018
+          - name: YR2019
+          - name: YR2020
+          - name: YR2021
+          - name: YR2022
