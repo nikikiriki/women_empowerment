@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: source
+    database: women-empowerment-490409
+    schema: source
+    description: "Raw data loaded into BigQuery for women empowerment project"
+    tables:
+      - name: whr_2015
+        description: "World Happiness Report 2015"
+        columns:
+          - name: Country
+          - name: Region
+          - name: Happiness Rank
+          - name: Happiness Score
+          - name: Standard Error
+          - name: Economy _GDP per Capita_
+          - name: Family
+          - name: Health _Life Expectancy_
+          - name: Freedom
+          - name: Trust _Government Corruption_
+          - name: Generosity
+          - name: Dystopia Residual
