@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: source
+  - name: women_empowerment
     database: women-empowerment-490409
     schema: source
     description: "Raw data loaded into BigQuery for women empowerment project"

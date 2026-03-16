@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('source', 'whr_2015') }}
+    select * from {{ source('women_empowerment', 'whr_2015') }}
 ),
 
 renamed as (
@@ -8,7 +8,6 @@ renamed as (
         Region                           as region,
         `Happiness Rank`                 as happiness_rank,
         `Happiness Score`                as happiness_score,
-        `Standard Error`                 as standard_error,
         `Economy _GDP per Capita_`       as gdp_per_capita,
         Family                           as family_score,
         `Health _Life Expectancy_`       as health_life_expectancy,
