@@ -26,3 +26,5 @@ sources:
         description: "Gender Inequality Index across years"
       - name: women_empowerment_index
         description: "Women Empowerment Index 2022"
+      - name: gdp
+        description: "GDP dataset across years"

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_women_empowerment_gii_years
+  - name: stg_gii_years
     description: "Cleaned GII dataset with trimmed fields, correct types, and deduplicated rows"
 
     columns:
@@ -47,3 +47,31 @@ models:
 
       - name: value
         description: "Processed value"
+
+  - name: gdp
+    description: "Cleaned GDP dataset reshaped from wide to long format"
+    columns:
+      - name: country_code
+        description: "ISO code of the country"
+        tests:
+          - not_null
+
+      - name: country_name
+        description: "Name of the country"
+        tests:
+          - not_null
+
+      - name: indicator_name
+        description: "Name of the GDP indicator"
+        tests:
+          - not_null
+
+      - name: year
+        description: "Year of observation"
+        tests:
+          - not_null
+
+      - name: gdp_value
+        description: "GDP value for the country and year"
+        tests:
+          - not_null
