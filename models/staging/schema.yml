@@ -52,6 +52,17 @@ sources:
           - name: Generosity
           - name: Trust__Government_Corruption_
           - name: Dystopia_Residual
+      - name: whr_2018
+        columns:
+          - name: Overall rank
+          - name: Country or region
+          - name: Score
+          - name: GDP per capita
+          - name: Social support
+          - name: Healthy life expectancy
+          - name: Freedom to make life choices
+          - name: Generosity
+          - name: Perceptions of corruption
       - name: whr_2019
         description: "Tabella World Happiness Report 2019"
         columns:
