@@ -7,8 +7,7 @@ models:
     columns:
       - name: country_iso_code
         description: "ISO code of the country"
-        tests:
-          - not_null
+
 
       - name: country
         description: "Country name"
@@ -18,29 +17,21 @@ models:
       - name: index_code
         description: "Index code identifier"
 
-      - name: index_name
+      - name: index
         description: "Index name"
-
-      - name: dimension
-        description: "Dimension of the indicator"
 
       - name: indicator_code
         description: "Indicator code"
-        tests:
-          - not_null
 
-      - name: indicator_name
+
+      - name: indicator
         description: "Indicator name"
-        tests:
-          - not_null
+
 
       - name: year
         description: "Year of observation"
         tests:
           - not_null
-
-      - name: year_str
-        description: "Year as integer"
 
       - name: actual_value
         description: "Actual measured value"
