@@ -6,6 +6,8 @@ sources:
     schema: source
     description: "Raw data loaded into BigQuery for women empowerment project"
     tables:
+      - name: literacy_rate
+        description: "Adult literacy rate total % of people ages 15 and above - World Bank"
       - name: whr_2015
         description: "World Happiness Report 2015"
       - name: whr_2016
