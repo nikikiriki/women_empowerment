@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_women_empowerment_gii_years
+    description: "Cleaned GII dataset with trimmed fields, correct types, and deduplicated rows"
+
+    columns:
+      - name: country_iso_code
+        description: "ISO code of the country"
+        tests:
+          - not_null
+
+      - name: country
+        description: "Country name"
+        tests:
+          - not_null
+
+      - name: index_code
+        description: "Index code identifier"
+
+      - name: index_name
+        description: "Index name"
+
+      - name: dimension
+        description: "Dimension of the indicator"
+
+      - name: indicator_code
+        description: "Indicator code"
+        tests:
+          - not_null
+
+      - name: indicator_name
+        description: "Indicator name"
+        tests:
+          - not_null
+
+      - name: year
+        description: "Year of observation"
+        tests:
+          - not_null
+
+      - name: year_str
+        description: "Year as integer"
+
+      - name: actual_value
+        description: "Actual measured value"
+
+      - name: value
+        description: "Processed value"
