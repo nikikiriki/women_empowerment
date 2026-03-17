@@ -4,16 +4,17 @@ with source as (
 
 renamed as (
     select
-        Country                                      as country_name,
-        `Happiness score`                            as happiness_score,
-        `Explained by: GDP per capita`               as gdp_per_capita,
-        `Explained by: Social support`               as family_score,
-        `Explained by: Healthy life expectancy`      as health_life_expectancy,
-        `Explained by: Freedom to make life choices` as freedom_score,
-        `Explained by: Perceptions of corruption`    as trust_govt_corruption,
-        `Explained by: Generosity`                   as generosity_score,
-        2022                                         as year
+      CAST(Country AS STRING)                                           as country_name,
+CAST(`Happiness score` AS FLOAT64) / 1000                              as happiness_score,
+CAST(`Explained by: GDP per capita` AS FLOAT64) / 1000               as gdp_per_capita,
+CAST(`Explained by: Social support` AS FLOAT64) / 1000               as family_score,
+CAST(`Explained by: Healthy life expectancy` AS FLOAT64) / 1000        as health_life_expectancy,
+CAST(`Explained by: Freedom to make life choices` AS FLOAT64) / 1000   as freedom_score,
+CAST(`Explained by: Perceptions of corruption` AS FLOAT64) / 1000      as trust_govt_corruption,
+CAST(`Explained by: Generosity` AS FLOAT64) / 1000                     as generosity_score,
+2022                                                              as year
     from source
+    where Country != 'xx'
 )
 
 select * from renamed

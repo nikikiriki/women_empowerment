@@ -12,7 +12,6 @@ renamed as (
         Freedom                          as freedom_score,
         `Trust _Government Corruption_`  as trust_govt_corruption,
         Generosity                       as generosity_score,
-        `Dystopia Residual`              as dystopia_residual,
         2015                             as year
     from source
 )
