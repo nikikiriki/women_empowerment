@@ -8,6 +8,8 @@ sources:
     tables:
       - name: literacy_rate
         description: "Adult literacy rate total % of people ages 15 and above - World Bank"
+      - name: Spend
+        description: "Education spending and GDP data"
       - name: whr_2015
         description: "World Happiness Report 2015"
       - name: whr_2016
@@ -30,3 +32,15 @@ sources:
         description: "Women Empowerment Index 2022"
       - name: gdp
         description: "GDP dataset across years"
+
+  - name: mreynoso_staging
+    database: women-empowerment-490409
+    schema: dbt_mreynoso_staging
+    tables:
+      - name: stg_gii_years
+
+  - name: gdilonardo_staging
+    database: women-empowerment-490409
+    schema: dbt_gdilonardo
+    tables:
+      - name: stg_women_empowerment__indicators_education
