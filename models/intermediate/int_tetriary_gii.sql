@@ -1,8 +1,7 @@
 WITH education AS (
     SELECT
         LOWER(TRIM(country_name)) AS country_name,
-        CAST(year AS INT64) AS year,
-        time_code,
+        CAST(CAST(year AS FLOAT64) AS INT64) AS year,
         country_code,
         bachelors_f, bachelors_m, bachelors_tot,
         lower_secondary_f, lower_secondary_m, lower_secondary_tot,
@@ -47,7 +46,6 @@ edu_mapped AS (
             ELSE country_name
         END AS country_name,
         year,
-        time_code,
         country_code,
         bachelors_f, bachelors_m, bachelors_tot,
         lower_secondary_f, lower_secondary_m, lower_secondary_tot,

@@ -32,6 +32,8 @@ sources:
         description: "Women Empowerment Index 2022"
       - name: gdp
         description: "GDP dataset across years"
+      - name: indicators_education
+        description: "Education indicators by country and gender 2015-2022"
 
   - name: mreynoso_staging
     database: women-empowerment-490409

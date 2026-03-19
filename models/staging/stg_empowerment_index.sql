@@ -4,19 +4,19 @@ with source as (
 
 renamed as (
     select
-        Country as country,
+        Country as country_name,
         
-        "Women's Empowerment Index (WEI) - 2022" as womens_empowerment_index,
+        `Women's Empowerment Index _WEI_ - 2022` as womens_empowerment_index,
         
-        "Women's Empowerment Group - 2022" as womens_empowerment_group,
+        `Women's Empowerment Group - 2022` as womens_empowerment_group,
         
-        "Global Gender Parity Index (GGPI) - 2022" as gender_parity_index,
+        `Global Gender Parity Index _GGPI_ - 2022` as gender_parity_index,
         
-        "Gender Parity Group - 2022" as gender_parity_group,
+        `Gender Parity Group - 2022` as gender_parity_group,
         
-        "Human Development Group - 2021" as human_development_group,
+        `Human Development Group - 2021` as human_development_group,
         
-        "Sustainable Development Goal regions" as sdg_regions
+        `Sustainable Development Goal regions` as sdg_regions
 
     from source
 )
