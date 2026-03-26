@@ -3,7 +3,7 @@ WITH gdp AS (
         LOWER(TRIM(country_name)) AS country_name,
         year,
         gdp_value
-    FROM {{ ref('stg_gdp') }}
+    FROM `women-empowerment-490409.dbt_mreynoso_staging.gdp`
 ),
 
 gii AS (
@@ -45,7 +45,7 @@ gdp_mapped AS (
 SELECT
     g2.country_name,
     g2.year,
-    g2.gdp_value,
+    g2.gdp_value        AS gdp_per_capita,
     g.gii_score
 FROM gdp_mapped g2
 INNER JOIN gii g

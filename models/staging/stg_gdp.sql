@@ -1,4 +1,4 @@
-with source as (
+ with source as (
     select * from {{ source('women_empowerment', 'gdp') }}
 ),
 
@@ -32,6 +32,7 @@ filtered as (
     )
     and country_code is not null
     and gdp_value is not null
+
 )
 
 select * from filtered
