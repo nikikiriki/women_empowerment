@@ -4,7 +4,7 @@ with source as (
 
 renamed as (
     select
-      CAST(Country AS STRING)                                           as country_name,
+      REPLACE(CAST(Country AS STRING), '*', '') AS country_name,
 CAST(`Happiness score` AS FLOAT64) / 1000                              as happiness_score,
 CAST(`Explained by: GDP per capita` AS FLOAT64) / 1000               as gdp_per_capita,
 CAST(`Explained by: Social support` AS FLOAT64) / 1000               as family_score,

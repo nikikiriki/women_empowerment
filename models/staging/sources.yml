@@ -8,6 +8,8 @@ sources:
     tables:
       - name: literacy_rate
         description: "Adult literacy rate total % of people ages 15 and above - World Bank"
+      - name: Spend
+        description: "Education spending and GDP data"
       - name: whr_2015
         description: "World Happiness Report 2015"
       - name: whr_2016
@@ -31,48 +33,16 @@ sources:
       - name: gdp
         description: "GDP dataset across years"
       - name: indicators_education
-        description: "Tabella degli indicatori sull'istruzione per paese e genere (2015-2022)."
-        columns:
-          - name: year
-            description: "L'anno di riferimento dei dati."
-          - name: time_code
-            description: "Codice temporale del periodo."
-          - name: country_name
-            description: "Nome completo del paese o della regione."
-          - name: country_code
-            description: "Codice ISO a 3 cifre del paese."
-      # Bachelor's Degrees
-          - name: Bachelors_f
-            description: "Percentuale popolazione femminile (25+) con laurea triennale."
-          - name: Bachelors_m
-            description: "Percentuale popolazione maschile (25+) con laurea triennale."
-          - name: Bachelors_tot
-            description: "Percentuale totale popolazione (25+) con laurea triennale."
-      # Lower Secondary
-          - name: lower_secondary_f
-          - name: lower_secondary_m
-          - name: lower_secondary_tot
-      # Post Secondary
-          - name: post_secondary_f
-          - name: post_secondary_m
-          - name: post_secondary_tot
-      # Primary
-          - name: primary_f
-          - name: primary_m
-          - name: primary_tot
-      # Short Cycle Tertiary
-          - name: short_cycle_tertiary_f
-          - name: short_cycle_tertiary_m
-          - name: short_cycle_tertiary_tot
-      # Upper Secondary
-          - name: upper_secondary_f
-          - name: upper_secondary_m
-          - name: upper_secondary_tot
-      # Master's Degrees
-          - name: Masters_f
-          - name: Master_m
-          - name: Master_tot
-      # Doctoral Degrees
-          - name: Doctoral_f
-          - name: Doctoral_m
-          - name: Doctoral_tot
+        description: "Education indicators by country and gender 2015-2022"
+
+  - name: mreynoso_staging
+    database: women-empowerment-490409
+    schema: dbt_mreynoso_staging
+    tables:
+      - name: stg_gii_years
+
+  - name: gdilonardo_staging
+    database: women-empowerment-490409
+    schema: dbt_gdilonardo
+    tables:
+      - name: stg_women_empowerment__indicators_education
